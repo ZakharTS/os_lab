@@ -26,7 +26,7 @@ int main() {
         if (curChar != 'a' && curChar != 'A' && curChar != 'e' && curChar != 'E' && curChar != 'i' && curChar != 'I'
         && curChar != 'o' && curChar != 'O' && curChar != 'u' && curChar != 'U' && curChar != 'y' && curChar != 'Y') {
             for (; curChar != '\n';) {
-                read(0, &curChar, 1);
+                sizeRead = read(0, &curChar, 1);
             }
             continue;
         }
@@ -50,14 +50,9 @@ int main() {
 //        sizeRead = read(0, &curChar, 1);
 //        if (!sizeRead) return -1;
 //
-//        if (!(curChar != 'a' && curChar != 'A' && curChar != 'e' && curChar != 'E' && curChar != 'i' && curChar != 'I'
+//        if (((curChar >= 64 && curChar <= 90) || (curChar >= 97 && curChar <= )) && (curChar != 'a' && curChar != 'A' && curChar != 'e' && curChar != 'E' && curChar != 'i' && curChar != 'I'
 //            && curChar != 'o' && curChar != 'O' && curChar != 'u' && curChar != 'U' && curChar != 'y' && curChar != 'Y')) {
-//            for (; curChar != '\n';) {
-//                read(0, &curChar, 1);
-//            }
-//            continue;
-//        }
-//        char str[256];
+//            char str[256];
 //        str[0] = curChar;
 //        int i = 1;
 //        for (; curChar != '\n'; i++) {
@@ -70,6 +65,12 @@ int main() {
 //        if (strNumber % 2 == 0) {
 //            write(2, str, i);
 //        }
+//        } else {
+//	for (; curChar != '\n';) {
+//                sizeRead = read(0, &curChar, 1);
+//            }
+//		  }
+//        
 //    }
 
     return 0;
